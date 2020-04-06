@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -58,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
 
                 /* Display popup message after clicking every item according to ArrayList **/
                 Toast.makeText(mContext, "clicked "+titleArrayList.get(position), Toast.LENGTH_SHORT).show();
+
+
+                /* for going to next activity after clicking every item according to ArrayList **/
+                Intent desIntent = new Intent(mContext,DescriptionActivity.class);
+                desIntent.putExtra("titles",titleArrayList.get(position));
+                startActivity(desIntent); //open the description
 
             }
         });//end of CustomItemClickListener
