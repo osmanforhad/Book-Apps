@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
                 /* for going to next activity after clicking every item according to ArrayList **/
                 Intent desIntent = new Intent(mContext,DescriptionActivity.class);
-                desIntent.putExtra("titles",titleArrayList.get(position));
+                desIntent.putExtra("titles",titleArrayList.get(position)); //here titles is the key for DescriptionActivity activity
                 startActivity(desIntent); //open the description
 
             }
